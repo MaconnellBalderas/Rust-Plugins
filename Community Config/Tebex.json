@@ -1,0 +1,18 @@
+{
+  "DebugMode": false,
+  "AutoReportingEnabled": true,
+  "SecretKey": "a4cc930c0382d5675d48aba56d089521cf635da2",
+  "CacheLifetime": 30,
+  "VIP Notes Enabled": false,
+  "VIP Codes": [],
+  "VIP Groups": [],
+  "Note Spawn Chance": 0.02,
+  "Note Cooldown (Seconds)": 600.0,
+  "Note Messages": {
+    "en": [
+      "Hey {0}, grab your exclusive 10% OFF VIP offer with code {2} at {1}! Limited time only!",
+      "{0}, seize your special discount! Use code {2} at {1} for a limited time offer!",
+      "Special surprise for you, {0}! Use code {2} at {1} for 10% off and enjoy your VIP benefits!"
+    ]
+  }
+}

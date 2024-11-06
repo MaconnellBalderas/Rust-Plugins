@@ -31,7 +31,74 @@ namespace Oxide.Plugins
         
         private static string template = @"
         [
-                        
+                        {
+                        ""name"": ""Stage Timer"",
+                        ""parent"": ""Hud"",
+                        ""components"": [
+                            {
+                            ""type"": ""UnityEngine.UI.Image"",
+                            ""color"": ""0.89 0.5 0.16 0.65""
+                            },
+                            {
+                            ""type"": ""RectTransform"",
+                            ""anchormin"": ""0.728 0.085"",
+                            ""anchormax"": ""0.822 0.134""
+                            }
+                        ]
+                        },
+                        {
+                        ""name"": ""Timer"",
+                        ""parent"": ""Stage Timer"",
+                        ""components"": [
+                            {
+                            ""type"": ""UnityEngine.UI.Text"",
+                            ""color"": ""1 1 1 0.71"",
+                            ""fontSize"": 20,
+                            ""align"": ""MiddleCenter"",
+                            ""text"": ""Phase: Peace""
+                            },
+                            {
+                            ""type"": ""RectTransform"",
+                            ""anchormin"": ""0.075 0.257"",
+                            ""anchormax"": ""0.95 0.886""
+                            }
+                        ]
+                        }, 
+
+
+                        {
+                        ""name"": ""Stage Phase"",
+                        ""parent"": ""Hud"",
+                        ""components"": [
+                            {
+                            ""type"": ""UnityEngine.UI.Image"",
+                            ""color"": ""0.89 0.5 0.16 0.65""
+                            },
+                            {
+                            ""type"": ""RectTransform"",
+                            ""anchormin"": ""0.728 0.024"",
+                            ""anchormax"": ""0.822 0.073""
+                            }
+                        ]
+                        }, 
+                        {
+                        ""name"": ""Phase"",
+                        ""parent"": ""Stage Phase"",
+                        ""components"": [
+                            {
+                            ""type"": ""UnityEngine.UI.Text"",
+                            ""color"": ""1 1 1 1"",
+                            ""fontSize"": 20,
+                            ""align"": ""MiddleCenter"",
+                            ""text"": ""11H : 58M""
+                            },
+                            {
+                            ""type"": ""RectTransform"",
+                            ""anchormin"": ""0.017 0.229"",
+                            ""anchormax"": ""0.958 0.857""
+                            }
+                        ]
+                        }, 
 
                         {
                         ""name"": ""Logo"",
@@ -357,6 +424,8 @@ namespace Oxide.Plugins
        
         void deleteUI(BasePlayer player)
         {
+            CuiHelper.DestroyUi(player, "Stage Timer");
+            CuiHelper.DestroyUi(player, "Stage Phase");
             CuiHelper.DestroyUi(player, "Logo");
 
             CuiHelper.DestroyUi(player, "First place Panel 1");
